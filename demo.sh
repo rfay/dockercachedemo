@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu -o pipefail
+
 echo "Start time for date1=$(date)"
 pushd date1
 docker build -t date1 .
