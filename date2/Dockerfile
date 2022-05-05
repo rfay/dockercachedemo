@@ -1,4 +1,4 @@
 FROM busybox
-ADD Dockerfile /
 RUN echo "Date is $(date)"
-RUN date >date.txt
+ARG CACHEBUST=1
+RUN date >date.txt && echo $SECONDS
